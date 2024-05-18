@@ -24,7 +24,7 @@ Final Sorted Array: `[1, 2, 3, 4, 5]`
 - It involves nested loops where each iteration selects the smallest element from the unsorted portion.
 - Despite its simplicity, it's not the most efficient sorting algorithm, particularly for large datasets.
 
-  ## Bubble Sort:
+## Bubble Sort:
 
 Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
 
@@ -51,7 +51,7 @@ Final Sorted Array: `[1, 2, 3, 5, 8]`
 - It involves nested loops where each pass through the list compares adjacent elements and possibly swaps them.
 - Despite its simplicity, bubble sort is not efficient for large datasets due to its quadratic time complexity. It's mainly used for educational purposes or for sorting small datasets.
 
-  ## Prime Numbers:
+## Prime Numbers:
 
 A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. In other words, it's a number that is divisible only by 1 and itself.
 
