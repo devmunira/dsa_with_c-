@@ -104,9 +104,9 @@ So, the first 10 numbers in the Fibonacci series are: 0, 1, 1, 2, 3, 5, 8, 13, 2
 
 The time complexity of generating the Fibonacci series using this method is O(n), where n is the number of terms in the series. This is because each term in the sequence requires constant time to compute, and we generate n terms.
 
-Certainly! Here's a concise explanation of the buy and sell stock algorithm (also known as the "Best Time to Buy and Sell Stock" problem) along with an example:
+## buy and sell stock algorithm (also known as the "Best Time to Buy and Sell Stock" problem) along with an example:
 
-## Problem Statement:
+### Problem Statement:
 
 Given an array `prices` where `prices[i]` is the price of a given stock on the i-th day, find the maximum profit you can achieve by buying and selling the stock once.
 
@@ -138,3 +138,88 @@ Consider the array of stock prices: `[7, 1, 5, 3, 6, 4]`.
 ## Time Complexity:
 
 The time complexity of this algorithm is O(n), where n is the number of days (length of the `prices` array). This is because we only need to iterate through the array once to find the maximum profit.
+
+## Insertion Sort:
+
+Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It iterates through an array, growing a sorted sub list one element at a time by repeatedly inserting the next element into the sorted sub list at the appropriate position.
+
+## Algorithm:
+
+1. Start with the second element of the array, assuming the first element is already sorted.
+2. Compare the current element with the elements before it in the sorted sub list.
+3. Shift the elements of the sorted sub list that are greater than the current element to the right.
+4. Insert the current element into the correct position in the sorted sub ist.
+5. Repeat steps 2-4 for all elements in the array.
+
+## Example:
+
+Consider the array `[5, 2, 4, 6, 1, 3]` that we want to sort.
+
+1. Start with the second element (`2`) and compare it with the first element (`5`). Since `2` is smaller, swap them. The array becomes `[2, 5, 4, 6, 1, 3]`.
+2. Move to the third element (`4`). Compare it with the elements before it (`5` and `2`). Insert `4` between `2` and `5`. The array becomes `[2, 4, 5, 6, 1, 3]`.
+3. Move to the fourth element (`6`). Since it's greater than the elements before it, leave it in place.
+4. Move to the fifth element (`1`). Compare it with the elements before it (`6`, `5`, `4`, `2`). Shift `6`, `5`, and `4` to the right to make space for `1`. The array becomes `[1, 2, 4, 5, 6, 3]`. Then, compare `1` with `2` and insert `1` before `2`. The array becomes `[1, 2, 4, 5, 6, 3]`.
+5. Move to the last element (`3`). Compare it with the elements before it (`6`, `5`). Shift `6` and `5` to the right to make space for `3`. The array becomes `[1, 2, 3, 4, 5, 6]`.
+
+## Final Sorted Array: ## `[1, 2, 3, 4, 5, 6]`
+
+## Time Complexity:
+
+- The time complexity of insertion sort is O(n^2), where n is the number of elements in the array.
+- In the worst-case scenario, when the array is in reverse order, insertion sort performs poorly.
+- However, for small arrays or partially sorted arrays, insertion sort can be efficient.
+
+## Counting Sort:
+
+Counting sort is an integer sorting algorithm that works by counting the number of occurrences of each distinct element in the array. It then uses this count information to place each element in its correct position in the output array. This algorithm is efficient for sorting arrays where the range of the elements (k) is not significantly greater than the number of elements (n).
+
+## Algorithm:
+
+1. Find the Range of Elements: Determine the maximum and minimum values in the input array to establish the range of the elements.
+2. Create Count Array: Initialize a count array of size `range` (maximum value - minimum value + 1) with all elements set to zero.
+3. Count Elements: Iterate through the input array and for each element, increase the corresponding index in the count array.
+4. Accumulate Counts: Modify the count array by accumulating the counts. This step transforms the count array to represent the position of each element in the output array.
+   5.Build Output Array: Iterate through the input array again, using the count array to place each element in its correct position in the output array. Decrease the count for each element as it is placed.
+   6.Copy to Original Array: Copy the sorted elements from the output array back to the original array.
+
+## Example:
+
+Consider the array `[4, 2, 2, 8, 3, 3, 1]` that we want to sort.
+
+1. Find the Range of Elements:
+
+   - Minimum value: 1
+   - Maximum value: 8
+   - Range: 8 - 1 + 1 = 8
+
+2. Create Count Array:
+
+   - Initialize count array of size 8 with all zeros: `[0, 0, 0, 0, 0, 0, 0, 0]`
+
+3. Count Elements:
+
+   - Count each element in the input array:
+     - `[4, 2, 2, 8, 3, 3, 1]`
+     - Count array becomes: `[1, 0, 2, 2, 1, 0, 0, 1]`
+
+4. Accumulate Counts:
+
+   - Modify the count array by accumulating counts:
+     - `[1, 1, 3, 5, 6, 6, 6, 7]`
+
+5. Build Output Array:
+
+   - Place elements in the output array using the count array:
+     - Output array: `[1, 2, 2, 3, 3, 4, 8]`
+
+6. Copy to Original Array:
+   - Copy the sorted elements back to the original array:
+     - Final sorted array: `[1, 2, 2, 3, 3, 4, 8]`
+
+## Final Sorted Array: `[1, 2, 2, 3, 3, 4, 8]`
+
+## Time Complexity:
+
+- The time complexity of counting sort is O(n + k), where `n` is the number of elements in the input array, and `k` is the range of the input values.
+- Counting sort is efficient when the range `k` is not significantly larger than the number of elements `n`.
+- Counting sort is not suitable for sorting arrays with a large range of values or when the range is much greater than the number of elements.
