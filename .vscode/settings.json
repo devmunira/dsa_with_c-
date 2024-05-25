@@ -3,5 +3,6 @@
     "*.css": "tailwindcss",
     "iostream": "cpp",
     "ostream": "cpp"
-  }
+  },
+  "cSpell.words": ["dignomial"]
 }

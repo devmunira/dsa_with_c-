@@ -48,3 +48,7 @@ int main(){
     spiralMatrix(array, 5, 5);
     return 0;
 }
+
+
+// firstRow[0] to lastRow[m-1]
+// firstRow[m-1] to lastRow[0]
